@@ -1,0 +1,9 @@
+.btnNewPersonal{
+    width: 100%;
+    height: 56px;
+}
+.mat-card{
+    background-color: #673ab7;
+    color: #ffffff;
+    font-weight: 600;
+}

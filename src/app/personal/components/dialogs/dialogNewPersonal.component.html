@@ -1,0 +1,117 @@
+    <!-- Importa los módulos necesarios de Angular Material -->
+    <form class="formPersonal" [formGroup]="personalForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+            <!-- <div class="col-lg-4">
+                <mat-form-field class="w-100">
+                    <input matInput placeholder="ID" type="text" required>
+                </mat-form-field>  
+            </div> -->
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Tipo de Documento</mat-label>
+                    <mat-select
+                        required
+                        formControlName="tipoDoc"
+                    >
+                        <mat-option value="DNI">DNI</mat-option>
+                        <mat-option value="RUC">RUC</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <input
+                        matInput
+                        placeholder="Número de Documento"
+                        type="text"
+                        required
+                        formControlName="numeroDoc"
+                    >
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <input
+                        matInput
+                        placeholder="Apellido Paterno"
+                        formControlName="apPaterno"
+                    >
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <input
+                        matInput
+                        placeholder="Apellido Materno"
+                        formControlName="apMaterno"
+                    >
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <input
+                        matInput
+                        placeholder="Primer Nombre"
+                        formControlName="nombre1"
+                    >
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <input
+                        matInput
+                        placeholder="Segundo Nombre"
+                        formControlName="nombre2"
+                    >
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Fecha de Nacimiento</mat-label>
+                    <input
+                        matInput
+                        [matDatepicker]="picker"
+                        placeholder="Fecha de Nacimiento"
+                        required
+                        formControlName="fechaNac"
+                    >
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Fecha de Registro</mat-label>
+                    <input
+                        matInput
+                        [matDatepicker]="picker2"
+                        placeholder="Fecha de Registro"
+                        required
+                        formControlName="fechaIngreso"
+                    >
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+        </div>
+    
+        <!-- Botón de enviar (o guardar) -->
+        <button
+            mat-raised-button
+            color="primary"
+        >
+            Guardar
+        </button>
+    
+</form>
+    

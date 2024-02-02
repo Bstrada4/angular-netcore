@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Estás seguro?</h2>
+<mat-dialog-content>
+  <p>Este no es reversible, está a punto de eliminar a </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onConfirm()" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>
